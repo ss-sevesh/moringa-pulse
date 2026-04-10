@@ -1,59 +1,47 @@
-# MoringaPulse 🌿
+# MoringaPulse Labs 🧪🌿
 
-[![CI](https://github.com/11SEV/moringa/actions/workflows/ci.yml/badge.svg)](https://github.com/11SEV/moringa/actions)
+[![CI](https://github.com/ss-sevesh/moringa-pulse/actions/workflows/ci.yml/badge.svg)](https://github.com/ss-sevesh/moringa-pulse/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**MoringaPulse** is a modern, data-driven platform dedicated to exploring the intersection of nutritional science and sustainable agriculture through the lens of *Moringa oleifera*.
+**MoringaPulse Labs** is a specialized scientific application for assessing the quality of Moringa powder using **UV-Visible Spectroscopy** data and Machine Learning.
+
+## 🔬 Scientific Context
+
+This project implements the methodology described in the research: **"Analysing the spectral fingerprint of bioactive compounds in Moringa powder."**
+
+Instead of measuring individual nutrients, this system evaluates the spectral signature of:
+- **Chlorophyll (660nm):** Indicates freshness and photosynthetic integrity.
+- **Polyphenols (530nm):** Indicates antioxidant strength.
+- **Flavonoids (450nm):** Influences blue-region absorption.
 
 ## ✨ Key Features
 
-- **Nutritional Benchmark Grid:** Compare Moringa's vitamins and minerals against standard health benchmarks (Carrots, Spinach, Milk).
-- **Sustainability Calculator:** Estimate carbon sequestration and water efficiency for Moringa cultivation.
-- **Production-Ready Architecture:** Built with Next.js 16, TypeScript, and Tailwind CSS.
+- **Spectral Analyzer Dashboard:** Input A450, A530, and A660 absorbance values from lab data.
+- **Quality Classification Engine:** Automated classification (Good, Medium, Poor) using spectral feature vectors.
+- **Bioactive Compound Library:** Reference thresholds for Chlorophyll, Flavonoids, and Polyphenols.
+- **Physics-First Logic:** Based on the **Beer–Lambert Law**, where absorbance is directly proportional to concentration.
 
 ## 🛠 Tech Stack
 
-- **Framework:** [Next.js](https://nextjs.org/) (App Router)
-- **Language:** [TypeScript](https://www.typescriptlang.org/)
-- **Styling:** [Tailwind CSS 4](https://tailwindcss.com/)
-- **CI/CD:** [GitHub Actions](https://github.com/features/actions)
+- **Framework:** Next.js 16 (App Router)
+- **Language:** TypeScript (Strict typing for spectral vectors)
+- **Styling:** Tailwind CSS 4
+- **CI/CD:** GitHub Actions
 
 ## 🚀 Getting Started
 
-### Prerequisites
+1. Clone & Install: `npm install`
+2. Run Dev: `npm run dev`
+3. Enter lab data in the **Quality Assessment Lab** section.
 
-- Node.js 22.x or later
-- npm or yarn
+## 📊 Reference Baselines
 
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/YOUR_USERNAME/moringa.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd moringa
-   ```
-3. Install dependencies:
-   ```bash
-   npm install
-   ```
-4. Start the development server:
-   ```bash
-   npm run dev
-   ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-## 📊 Methodology
-
-Nutritional values are sourced from the **UN Food and Agriculture Organization (FAO)** and sustainability constants are based on average carbon sequestration data for tropical fast-growing trees.
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+| Quality | A450 | A530 | A660 |
+| :--- | :--- | :--- | :--- |
+| **Good** | 0.72 | 0.65 | 0.81 |
+| **Medium** | 0.40 | 0.35 | 0.50 |
+| **Poor** | 0.20 | 0.18 | 0.25 |
 
 ---
 
-Built with 💚 to promote a healthier and more sustainable planet.
+Built with scientific rigor to standardize Moringa quality assessment globally.

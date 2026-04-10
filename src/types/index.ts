@@ -1,23 +1,31 @@
-// Nutritional data per 100g of fresh Moringa leaves (approximate)
-export interface NutritionalData {
-  vitaminA_mg: number; // Beta-carotene
-  vitaminC_mg: number;
-  iron_mg: number;
-  calcium_mg: number;
-  protein_g: number;
-  potassium_mg: number;
+export type QualityCategory = "Good" | "Medium" | "Poor";
+
+export interface SpectralReading {
+  a450: number; // Pigment and flavonoid-related absorption
+  a530: number; // Polyphenol-related absorption
+  a660: number; // Chlorophyll absorption
 }
 
-export interface SustainabilityMetrics {
-  co2Sequestration_kgPerYear: number; // per mature tree
-  waterUsage_litersPerKg: number;
-  yieldPerAcre_kg: number;
+export interface QualityResult {
+  category: QualityCategory;
+  confidence: number; // Mock confidence for the simulation
+  description: string;
 }
 
-export interface ComparisonMetric {
-  moringaValue: number;
-  standardValue: number;
-  standardName: string;
-  unit: string;
-  ratio: number;
+export interface BioactiveCompoundInfo {
+  name: string;
+  uvRange: string;
+  visibleRange: string;
+  significance: string;
+  thresholds: {
+    low: string;
+    medium: string;
+    high: string;
+  };
+}
+
+export interface SpectralComparison {
+  reading: SpectralReading;
+  baseline: SpectralReading;
+  category: QualityCategory;
 }

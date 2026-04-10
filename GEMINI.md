@@ -1,38 +1,33 @@
-# Moringa-Pulse: Project Memory
+# Moringa-Pulse: Project Memory (Scientific Pivot)
 
 ## Vision
-**Moringa-Pulse** is a professional, full-stack platform providing data-driven insights into the health benefits and sustainability metrics of *Moringa oleifera*.
+**Moringa-Pulse** is a specialized scientific application for analyzing the **spectral fingerprint** of Moringa powder using **UV-Visible Spectroscopy** data.
 
-## Core Goals
-- **Data-Driven Health:** Provide accurate nutritional comparisons with RDA metrics.
-- **Sustainability First:** Model environmental impact (CO2, water efficiency) for sustainable agriculture.
-- **Professional Engineering:** High code quality, type safety, and automated validation.
+## Core Goals (Scientific)
+- **Spectral Fingerprinting:** Evaluate bioactive compound concentrations via light absorption (Chlorophyll, Flavonoids, Polyphenols).
+- **Quality Classification:** Automate quality assessment (Good, Medium, Poor) based on absorbance values at 450nm, 530nm, and 660nm.
+- **Machine Learning Ready:** Structured data representation for quality pattern recognition.
 
-## Tech Stack
-- **Frontend/API:** Next.js 16 (App Router, React 20?)
-- **Styling:** Tailwind CSS 4+
-- **Testing:** Jest + RTL
-- **CI/CD:** GitHub Actions
+## Scientific Benchmarks (Source: moringa.docx.pdf)
+- **Wavelengths:**
+  - 450nm (Pigments & Flavonoids)
+  - 530nm (Polyphenols/Antioxidants)
+  - 660nm (Chlorophyll/Freshness)
+- **Reference Absorbance Data:**
+  - **Good:** [0.72, 0.65, 0.81]
+  - **Medium:** [0.40, 0.35, 0.50]
+  - **Poor:** [0.20, 0.18, 0.25]
 
 ## Standards
-- **Component Style:** Functional components with TypeScript interfaces.
-- **File Naming:** kebab-case for directories/files, PascalCase for React components.
-- **Commits:** Standardize with Conventional Commits (feat, fix, docs, refactor, test, ci).
-- **Git Flow:** `main` branch is protected; feature branches for development.
-
-## Project Structure
-- `src/app/`: App router routes.
-- `src/components/`: Shared React components (UI/Layout/Features).
-- `src/lib/`: Utility functions and calculation logic (Moringa-specific math).
-- `src/types/`: Centralized TypeScript interfaces.
-- `__tests__/`: Testing suite mirror of `src/`.
+- **Lab Precision:** Display absorbance values to 2-3 decimal places.
+- **Scientific Context:** Provide chemical significance for each wavelength.
+- **Type Safety:** 100% TypeScript for classification models.
 
 ## Progress
-- [x] Git Init
-- [x] Next.js Scaffold
-- [x] Project Memory (GEMINI.md)
-- [x] Core Logic (Nutritional/Sustainability calculations)
-- [x] UI/UX Design (Dashboard/Home)
-- [ ] Unit Tests
-- [ ] CI/CD Setup
-- [ ] GitHub Repository Creation
+- [x] Initial Scaffold (Generic v1)
+- [x] Scientific Pivot Research (moringa.docx.pdf)
+- [x] Project Memory Update (GEMINI.md)
+- [ ] Scientific Type Definitions
+- [ ] Quality Classification Logic
+- [ ] Spectral Input & Analysis UI
+- [ ] Push Correction to GitHub
